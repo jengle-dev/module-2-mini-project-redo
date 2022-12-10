@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Snippet Sheet</title>
+        <link rel="stylesheet" href="Assets\css\reset.css"/>
+        <link rel="stylesheet" href="Assets\css\style.css"/>
+    </head>
+    <body>
+
+        <header>
+            <h1 class="page-title">CSS Snippet Cheatsheet</h1>
+            <p>Do you ever have trouble recalling the exact syntax for your favorite CSS code? Give it a permanent home and add it to this page! Select any snippet below and it'll automatically select all of the code for you to copy.</p>
+        </header>
+        <main>
+            <!-- now think of this like a grid/flexbox -->
+            <section>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <!-- creating the Flexbox Row -->
+                        <h2 class="card-header">Flexbox Row</h2>
+                        <card-body class="card-body">
+                            <p>Use these three properties to create a Flexbox row layout.</p>
+                        </card-body>
+                        <pre class="code-block"><code>.row {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+}
+                        </code> <!--<code> tag is used to display code without erroring or displaying what the code should be doing behind the scenes-->
+                        </pre>
+                    </card-code>
+                </card-type            >
+            </section>
+        </main>
+        <footer>
+            <h3>Made with ❤️ and CSS</h3>
+        </footer>
+    </body>
+</html>
