@@ -1,0 +1,203 @@
+/* var() are set inside the :root seelector for matching the root document's root elements */
+:root {
+    --bkgdcolor: #584B72; /* 88, 75, 114 */
+    --hlcolor:#F7A95C; /* 274, 169, 92 */
+    --medpurple: #91647C; /* 145, 100, 124 */
+    --lttext: #F1E4D3; /* 241, 228, 211 */
+    --hdtext: #ECD1AD; /* 236, 209, 173 */
+}
+
+::selection {
+    color: black;
+    background-color: #F7A95C;
+}
+
+html {
+    font-size: 10px;
+}
+
+/* I think I am able to set variable names per my preference */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.5;
+    color: var(--lttext);
+    background-color: var(--bkgdcolor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* why does the example solution have the margin-bottom set to an rem and what is it relative to, the same original text size? */
+    margin-bottom: .625rem;
+    color: var(--hlcolor);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.5rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+/* do we really need to defin h4, h5 & h6 if they are unused elements/classes */
+h4 {
+    font-size: 2.5rem;
+}
+
+h5 {
+    font-size: 2rem;
+}
+
+h6 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+code {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header {
+    width: 96%;
+    margin: 0 auto;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+header h1.page-title {
+    padding: 1rem 1.2rem;
+    font-size: 4.5rem;
+}
+
+main {
+    width: 96%;
+    text-align: center;
+}
+
+footer {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* grid with flexbox */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.card-column {
+    flex: 1 0 100%;
+    padding: 1.5rem;
+    transition: flex-basis 500ms linear;
+    margin-bottom: 1.5rem;
+}
+
+.code-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
+    color: var(--hdtext);
+    outline: 2px dashed var(--hlcolor);
+    outline-offset: -2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-card .card-header {
+    position: relative;
+    margin: -4rem 0 1.5rem 0;
+    padding: 0.5rem 1rem;
+    background-color: var(--bkgdcolor);
+    color: var(--hlcolor);
+    border: 2px solid var(--hdtext);
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.code-block {
+    text-align: left;
+    margin: 2rem 2rem 2rem 2rem;
+    overflow-wrap: normal;
+}
+
+.grid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(12, 1fr);
+}
+  
+.code-card:hover, 
+.code-card:hover .card-header {
+    box-shadow: inset 0px 0px 8px rgba(236, 209, 173, 1), 0 0 15px rgba(236, 209, 173, 1);
+}
+
+.card-header {
+    position: relative;
+    margin-top: -20px;
+}
+
+.code-card .code-block {
+    flex-grow: 1;
+}
+
+.code-card pre {
+    white-space: pre-wrap;
+    overflow: auto;
+    tab-size: 4; /* I don't know what this is */
+    padding: 1.2rem 1 rem;
+    color: var(--lttext);
+    border-radius: 8px; /*rounded corners*/
+    background-image: linear-gradient(
+        rgba(88, 75, 114, .03) 0%,
+        rgba((145, 100, 124, 0.6) 100%)
+    );
+    display: flex;
+    align-items: center;
+}
+
+.code-card pre:active {
+    user-select: all;
+}
+
+/* flex needs @media */
+@media screen and (min-width: 768px) {
+    .card-column {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .card-column:last-child {
+        flex-grow: 1;
+    } 
+}
+
+@media screen and (min-width:992px) {
+    header {
+        width: 75%;
+    }
+    .card-column {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}

@@ -15,7 +15,7 @@
         </header>
         <main>
             <!-- now think of this like a grid/flexbox -->
-            <section>
+            <section class="row justify-center">
                 <card-type class="card-column">
                     <card-code class="card code-card">
                         <!-- creating the Flexbox Row -->
@@ -27,11 +27,75 @@
 display: flex;
 flex-direction: row;
 flex-wrap: wrap;
-}
-                        </code> <!--<code> tag is used to display code without erroring or displaying what the code should be doing behind the scenes-->
+}</code> <!--<code> tag is used to display code without erroring or displaying what the code should be doing behind the scenes-->
                         </pre>
                     </card-code>
-                </card-type            >
+                </card-type>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <h2 class="card-header">Flexbox Column</h2>
+                        <card-body>
+                            <p>Use this to create a Flexbox column layout.</p>
+                        </card-body>
+                        <pre class="code-block"><code>.column {
+diplay: flex;
+flex-direction: column;
+}</code></pre>
+                    </card-code>
+                </card-type>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <h2 class="card-header">CSS Grid Layout</h2>
+                        <card-body>
+                            <p>Build a 12-column layout using CSS Grid</p>
+                        </card-body>
+                    <pre class="code-block"><code>.grid {
+display: grid;
+width: 100%;
+grid-template-columns: repeat(12, 1fr);
+}</code></pre>
+                    </card-code>
+                </card-type>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <h2 class="card-header">Linear Gradients</h2>
+                        <card-body>
+                            <p>This will create a background linear gradient from top to bottom.</p>
+                        </card-body>
+                    <pre class="code-block"><code>.linear-gradient-background {
+background-image: linear-gradient(
+rgba(232, 102, 236, 0.3) 0%,
+rgba(232, 102, 236, 0.6) 100%
+);
+}</code></pre>
+                    </card-code>
+                </card-type>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <h2 class="card-header">Box Transition Glow</h2>
+                        <card-body>
+                            <p>Use transition and box shadows to glow on hover.</p>
+                        </card-body>
+                    <pre class="code-block"><code>.linear-gradient-background {
+background-image: linear-gradient(
+rgba(232, 102, 236, 0.3) 0%,
+rgba(232, 102, 236, 0.6) 100%
+);
+}</code></pre>
+                    </card-code>
+                </card-type>
+                <card-type class="card-column">
+                    <card-code class="card code-card">
+                        <h2 class="card-header">Overlay Card with Title</h2>
+                        <card-body>
+                            <p>Use position properties and negative margins to raise elements higher than their natural starting point.</p>
+                        </card-body>
+                    <pre class="code-block"><code>.card-header {
+position: relative;
+margin-top: -20px;
+}</code></pre>
+                    </card-code>
+                </card-type>
             </section>
         </main>
         <footer>
