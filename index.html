@@ -76,11 +76,13 @@ rgba(232, 102, 236, 0.6) 100%
                         <card-body>
                             <p>Use transition and box shadows to glow on hover.</p>
                         </card-body>
-                    <pre class="code-block"><code>.linear-gradient-background {
-background-image: linear-gradient(
-rgba(232, 102, 236, 0.3) 0%,
-rgba(232, 102, 236, 0.6) 100%
-);
+                    <pre class="code-block"><code>.code-card .card-header {
+border-radius: 8px;
+transition: all 0.5s ease-in-out;<br>
+.code-card:hover, code-card:hover .card-header{
+box-shadow: inset 0px 0px 8px
+rgba(232, 102, 236, 1), 0 0 15px
+rgba(232, 236, 1);
 }</code></pre>
                     </card-code>
                 </card-type>

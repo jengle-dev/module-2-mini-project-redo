@@ -85,12 +85,13 @@ header h1.page-title {
 
 main {
     width: 96%;
-    text-align: center;
+    text-align: left;
 }
 
 footer {
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
     text-align: center;
+    padding-bottom: 2rem;
 }
 
 /* grid with flexbox */
@@ -98,8 +99,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin-left: -1.5rem;
-    margin-right: -1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 .justify-center {
@@ -150,7 +151,8 @@ footer {
   
 .code-card:hover, 
 .code-card:hover .card-header {
-    box-shadow: inset 0px 0px 8px rgba(236, 209, 173, 1), 0 0 15px rgba(236, 209, 173, 1);
+    box-shadow: inset 0px 0px 8px rgba(236, 209, 173, 1), 
+    0 0 15px rgba(236, 209, 173, 1);
 }
 
 .card-header {
